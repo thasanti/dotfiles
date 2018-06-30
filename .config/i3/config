@@ -1,0 +1,194 @@
+hide_edge_borders both
+for_window [class="^.*"] border pixel 0
+font pango:envypn 11
+
+set $up j
+set $down k
+set $left l
+set $right semicolon
+
+set $monitor eDP-1
+set $monitor2 DP-1
+
+set $mod Mod1
+set $mod2 Mod4
+
+set $bindt exec termite
+set $bindc exec google-chrome-stable
+set $bindm exec spotify
+set $bindy exec /opt/JetBrains/apps/IDEA-U/ch-0/181.4892.42/bin/idea.sh
+set $bindp exec /opt/JetBrains/apps/CLion/ch-0/181.4668.70/bin/clion.sh 
+set $bindf exec nautilus
+set $binde exec termite -e alsamixer
+
+set $bindq kill
+set $bindd exec dmenu_run -fn 'Droid Sans Mono:pixelsize=35' -nb '#000000' -nf '#FFFFFF' -sf '#FFFFFF' -sb '#FFA500'
+set $bindh layout tabbed
+set $bindg layout toggle split
+
+#////////////////////// binds //////////////////////////
+
+bindsym $mod+r mode "resize"
+bindsym $mod+c $bindc
+bindsym $mod+m $bindm
+bindsym $mod+y $bindy
+bindsym $mod+p $bindp
+bindsym $mod+f $bindf
+bindsym $mod+e $binde
+bindsym $mod+t $bindt
+
+bindsym $mod+q $bindq
+bindsym $mod+d $bindd
+bindsym $mod+h $bindh
+bindsym $mod+g $bindg
+
+
+bindsym $mod2+r mode "resize"
+bindsym $mod2+c $bindc
+bindsym $mod2+m $bindm
+bindsym $mod2+y $bindy
+bindsym $mod2+p $bindp
+bindsym $mod2+f $bindf
+bindsym $mod2+e $binde
+bindsym $mod2+t $bindt
+
+bindsym $mod2+q $bindq
+bindsym $mod2+d $bindd
+bindsym $mod2+h $bindh
+bindsym $mod2+g $bindg
+
+#////////////////////// i3 binds //////////////////////////
+
+bindsym $mod+$left focus left
+bindsym $mod+$down focus down
+bindsym $mod+$up focus up
+bindsym $mod+$right focus right
+
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
+
+bindsym $mod+Shift+$left move left
+bindsym $mod+Shift+$down move down
+bindsym $mod+Shift+$up move up
+bindsym $mod+Shift+$right move right
+
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
+
+
+bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+space focus mode_toggle
+
+bindsym $mod+a focus parent
+
+bindsym $mod+Shift+minus move scratchpad
+
+bindsym $mod+minus scratchpad show
+
+bindsym $mod+grave focus output $monitor
+bindsym $mod2+grave focus output $monitor2
+
+workspace 1 output $monitor
+workspace 2 output $monitor
+workspace 3 output $monitor
+workspace 4 output $monitor
+workspace 5 output $monitor
+workspace 6 output $monitor
+workspace 7 output $monitor
+workspace 8 output $monitor
+workspace 9 output $monitor
+
+workspace 21 output $monitor2
+workspace 22 output $monitor2
+workspace 23 output $monitor2
+workspace 24 output $monitor2
+workspace 25 output $monitor2
+workspace 26 output $monitor2
+workspace 27 output $monitor2
+workspace 28 output $monitor2
+workspace 29 output $monitor2
+
+bindsym $mod+1 workspace 1
+bindsym $mod+2 workspace 2
+bindsym $mod+3 workspace 3
+bindsym $mod+4 workspace 4
+bindsym $mod+5 workspace 5
+bindsym $mod+6 workspace 6
+bindsym $mod+7 workspace 7
+bindsym $mod+8 workspace 8
+bindsym $mod+9 workspace 9
+
+bindsym $mod2+1 workspace 21
+bindsym $mod2+2 workspace 22
+bindsym $mod2+3 workspace 23
+bindsym $mod2+4 workspace 24
+bindsym $mod2+5 workspace 25
+bindsym $mod2+6 workspace 26
+bindsym $mod2+7 workspace 27
+bindsym $mod2+8 workspace 28
+bindsym $mod2+9 workspace 29
+
+bindsym $mod+Shift+1 move container to workspace 1
+bindsym $mod+Shift+2 move container to workspace 2
+bindsym $mod+Shift+3 move container to workspace 3
+bindsym $mod+Shift+4 move container to workspace 4
+bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+6 move container to workspace 6
+bindsym $mod+Shift+7 move container to workspace 7
+bindsym $mod+Shift+8 move container to workspace 8
+bindsym $mod+Shift+9 move container to workspace 9
+bindsym $mod+Shift+0 move container to workspace 0
+
+bindsym $mod2+Shift+1 move container to workspace 21
+bindsym $mod2+Shift+2 move container to workspace 22
+bindsym $mod2+Shift+3 move container to workspace 23
+bindsym $mod2+Shift+4 move container to workspace 24
+bindsym $mod2+Shift+5 move container to workspace 25
+bindsym $mod2+Shift+6 move container to workspace 26
+bindsym $mod2+Shift+7 move container to workspace 27
+bindsym $mod2+Shift+8 move container to workspace 28
+bindsym $mod2+Shift+9 move container to workspace 29
+bindsym $mod2+Shift+0 move container to workspace 20
+
+bindsym XF86MonBrightnessDown	exec --no-startup-id brightnessctl set 10%-
+bindsym XF86MonBrightnessUp	exec --no-startup-id brightnessctl set 10%+
+bindsym XF86AudioNext		exec --no-startup-id sp next
+bindsym XF86AudioPlay		exec --no-startup-id sp play
+bindsym XF86AudioPrev		exec --no-startup-id sp prev
+bindsym XF86AudioMute		exec --no-startup-id amixer -D pulse set Master 1+ toggle
+bindsym XF86AudioLowerVolume	exec --no-startup-id amixer -D pulse set Master 5%-
+bindsym XF86AudioRaiseVolume	exec --no-startup-id amixer -D pulse set Master 5%+
+bindsym XF86Display		exec --no-startup-id sh ~/.config/i3/displayScript.sh
+
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
+
+mode "resize" {
+        bindsym $left       resize shrink width 50 px or 50 ppt
+        bindsym $down       resize grow height 50 px or 50 ppt
+        bindsym $up         resize shrink height 50 px or 50 ppt
+        bindsym $right      resize grow width 50 px or 50 ppt
+
+
+        bindsym Left        resize shrink width 50 px or 50 ppt
+        bindsym Down        resize grow height 50 px or 50 ppt
+        bindsym Up          resize shrink height 50 px or 50 ppt
+        bindsym Right       resize grow width 50 px or 50 ppt
+
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+exec --no-startup-id nm-applet
+exec i3-config-wizard
+exec -no-startup-id xcompmgr
+exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
+exec --no-startup-id /home/santi/.config/polybar/launch.sh
+exec --no-startup-id xinput --set-prop '1A586753:00 06CB:8323 Touchpad' "libinput Natural Scrolling Enabled" 1
+exec xrandr --dpi 220
+exec megasync
