@@ -92,6 +92,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+neofetch
 alias v="vim"
-alias vi="vim"
 alias config='git --git-dir $HOME/.cfg/ --work-tree=$HOME'
+alias sshserver='ssh root@5.230.156.107'

@@ -25,10 +25,11 @@ set $bindq kill
 set $bindd exec dmenu_run -fn 'Droid Sans Mono:pixelsize=35' -nb '#000000' -nf '#FFFFFF' -sf '#FFFFFF' -sb '#FFA500'
 set $bindh layout tabbed
 set $bindg layout toggle split
+set $bindr mode "resize"
 
 #////////////////////// binds //////////////////////////
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r $bindr
 bindsym $mod+c $bindc
 bindsym $mod+m $bindm
 bindsym $mod+y $bindy
