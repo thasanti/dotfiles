@@ -96,3 +96,4 @@ neofetch
 alias v="vim"
 alias config='git --git-dir $HOME/.cfg/ --work-tree=$HOME'
 alias sshserver='ssh root@5.230.156.107'
+alias generatepaclist='pacman -Qqe > ~/.config/paclist'
