@@ -164,7 +164,7 @@ bindsym XF86AudioPrev		exec --no-startup-id sp prev
 bindsym XF86AudioMute		exec --no-startup-id amixer -D pulse set Master 1+ toggle
 bindsym XF86AudioLowerVolume	exec --no-startup-id amixer -D pulse set Master 5%-
 bindsym XF86AudioRaiseVolume	exec --no-startup-id amixer -D pulse set Master 5%+
-bindsym XF86Display		exec --no-startup-id sh ~/.config/i3/displayScript.sh
+bindsym XF86Display		exec --no-startup-id sh ~/.config/i3/displayScript.sh $monitor2 $monitor
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
@@ -186,6 +186,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 exec --no-startup-id nm-applet
+exec ~/.config/i3/displayScript.sh $monitor2 $monitor
 exec i3-config-wizard
 exec -no-startup-id xcompmgr
 exec --no-startup-id feh --bg-fill ~/wallpaper.jpg
