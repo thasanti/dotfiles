@@ -67,6 +67,7 @@ fakeroot
 feh
 file
 filesystem
+filezilla
 findutils
 firefox
 flex
@@ -75,6 +76,7 @@ gawk
 gcc
 gcc-libs
 gdb
+geogebra
 gettext
 gimp
 git
@@ -93,6 +95,7 @@ gtkglext
 gzip
 haveged
 hdf5
+hidapi
 hplip
 htop
 i3-gaps
@@ -108,6 +111,7 @@ jetbrains-toolbox
 jfsutils
 kdenetwork-filesharing
 less
+lib32-openal
 libmagick6
 libreoffice-fresh
 libtool
@@ -136,13 +140,16 @@ neofetch
 net-tools
 netctl
 networkmanager
+nextcloud-client
 nfs-utils
 nilfs-utils
 nmap
 ntfs-3g
 numix-icon-theme-circle
+openrazer-meta
 openssh
 os-prober
+pacaur
 pacman
 patch
 pciutils
@@ -162,6 +169,7 @@ pulseaudio-equalizer
 pulseeffects
 putty
 python-gobject
+python-hidapi
 python-pip
 python-pyqt5
 python2-gnomekeyring
