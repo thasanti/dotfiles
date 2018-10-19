@@ -17,6 +17,7 @@ map <C-l> <C-w>l
 
 call plug#begin('~/.vim/plugged')
 Plug 'lervag/vimtex'
+Plug 'Valloric/YouCompleteMe'
 Plug 'chiel92/vim-autoformat'
 call plug#end()
 
